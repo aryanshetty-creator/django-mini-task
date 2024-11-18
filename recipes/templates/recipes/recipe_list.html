@@ -1,0 +1,18 @@
+<!-- templates/recipe_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recipe List</title>
+</head>
+<body>
+    <h1>Recipes</h1>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                {{ recipe.title }}
+                <a href="{% url 'edit_recipe' recipe.id %}">Edit</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
